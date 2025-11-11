@@ -18,4 +18,7 @@ Hostile enemies - pygame to implement enemy ai for automated movement (also to a
 
 Timer - using pygame's clock feature to set a time limit on the player, to force quick decision making
 
-Scoring system - done by a calculation of time expended, enemies defeated, and collectables obtained 
+Scoring system (endgoal) - done by a calculation of time expended, enemies defeated, and collectables obtained 
+
+advanced movement (endgoal) - knowledge in python's physics in order to create a more involved gameplay expericene compared to mere WASD movement 
+#####
