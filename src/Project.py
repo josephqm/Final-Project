@@ -152,7 +152,7 @@ class Block(Object):
         block = get_block(size)
         self.image.blit(block, (0, 0))
         self.mask = pygame.mask.from_surface(self.image)
-    
+
 
 def get_background(name):
      image = pygame.image.load(join("assets", "Background", name))
@@ -232,7 +232,7 @@ def main(window):
 
     player = Player(100, 200, 50, 50)
     floor = [Block(i * block_size, HEIGHT - block_size, block_size) for i in range(-WIDTH // block_size, WIDTH * 2 // block_size)]
-    objects = [*floor, Block(0, HEIGHT - block_size *2, block_size), Block(block_size * 3, HEIGHT - block_size * 4, block_size)]
+    objects = [*floor, Block(0, HEIGHT - block_size *2, block_size), Block(block_size * 3, HEIGHT - block_size * 4, block_size), Block(block_size * 7, HEIGHT - block_size * 5, block_size) ]
     
     offeset_x = 0
     scroll_area_width = 200
@@ -252,6 +252,7 @@ def main(window):
                     player.jump()
         
         player.loop(FPS)
+
         handle_move(player, objects)
         draw(window, background, bg_image, player, objects, offeset_x) 
 
