@@ -231,8 +231,11 @@ def main(window):
     block_size = 96
 
     player = Player(100, 200, 50, 50)
-    floor = [Block(i * block_size, HEIGHT - block_size, block_size) for i in range(-WIDTH // block_size, WIDTH * 2 // block_size)]
-    objects = [*floor, Block(0, HEIGHT - block_size *2, block_size), Block(block_size * 3, HEIGHT - block_size * 4, block_size), Block(block_size * 7, HEIGHT - block_size * 5, block_size) ]
+    
+    objects = [Block(block_size, HEIGHT - block_size *2, block_size), Block(block_size * 3, HEIGHT - block_size * 4, block_size), Block(block_size * 6, HEIGHT - block_size * 5, block_size)
+               , Block(block_size * 5, HEIGHT - block_size * 7.25, block_size),  Block(block_size * 10, HEIGHT - block_size * 5, block_size),  Block(block_size * 13, HEIGHT - block_size * 2, block_size)
+                , Block(block_size * 17, HEIGHT - block_size * 2, block_size),  Block(block_size * 17, HEIGHT - block_size * 4, block_size),  Block(block_size * 19, HEIGHT - block_size * 6, block_size)
+                 , Block(block_size * 20, HEIGHT - block_size * 6.2, block_size),  Block(block_size * 20, HEIGHT - block_size * 4, block_size) ]
     
     offeset_x = 0
     scroll_area_width = 200
